@@ -1,0 +1,42 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iwsgi
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+
+
+/.idea/
+/.jpb/
+/target/
+/.gradle/
+/build/
+/gradle/
+gradlew
+gradlew.bat
+*.log
+/.settings/
+*/testClass.java
+*.html
+allure-results/
+*.txt
