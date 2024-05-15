@@ -1,21 +1,28 @@
 package player.test.endpoints;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.util.UriComponentsBuilder;
 import player.test.dto.*;
+import player.test.webclient.base.BaseWebClientEntrypoint;
+import player.test.webclient.factory.WebClientsFactory;
+import player.test.webclient.filter.WebClientFilterFunctions;
 import reactor.core.publisher.Mono;
 
 @Component
-public class PlayerHttpEndpoint {
+public class PlayerHttpEndpoint extends BaseWebClientEntrypoint {
 
-    private final WebClient webClient;
 
-    @Autowired
-    public PlayerHttpEndpoint(WebClient webClient) {
-        this.webClient = webClient;
+    public PlayerHttpEndpoint(@Value("${app.url}") String url, WebClientsFactory factory) {
+        super(
+                factory.createClientBuilder(url)
+                        .filter(WebClientFilterFunctions.plusFilterFunction)
+                        .build()
+        );
     }
+
 
     public Mono<CreateUserRequestDto> createUser(CreateUserRequestDto request) {
         String uri = UriComponentsBuilder.fromPath("/player/create/{editor}")

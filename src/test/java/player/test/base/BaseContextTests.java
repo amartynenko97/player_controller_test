@@ -4,7 +4,6 @@ import io.qameta.allure.testng.AllureTestNg;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import player.test.config.AppConfig;
 import player.test.endpoints.PlayerHttpEndpoint;

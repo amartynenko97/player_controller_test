@@ -17,7 +17,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
-    <!--endregion-->
+        <!--endregion-->
+        <!-- Jetty -->
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-client</artifactId>
+        </dependency>
         <!-- TestNG -->
         <dependency>
             <groupId>org.testng</groupId>
