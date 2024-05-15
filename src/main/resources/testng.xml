@@ -5,4 +5,19 @@
             <class name="player.test.CreateUserTest"/>
         </classes>
     </test>
+    <test name="DeleteUserTest">
+        <classes>
+            <class name="player.test.DeleteUserTest"/>
+        </classes>
+    </test>
+    <test name="GetUserTest">
+        <classes>
+            <class name="player.test.GetUserTest"/>
+        </classes>
+    </test>
+    <test name="UpdateUserTest">
+        <classes>
+            <class name="player.test.UpdateUserTest"/>
+        </classes>
+    </test>
 </suite>

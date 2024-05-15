@@ -17,9 +17,4 @@ public class BaseContextTests extends AbstractTestNGSpringContextTests {
 
     @Autowired
     protected AppConfig appConfig;
-
-//    @BeforeClass
-//    public void setUp() {
-//
-//    }
 }
