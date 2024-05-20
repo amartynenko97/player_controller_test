@@ -10,7 +10,7 @@ public class TestUtils {
     private static final Random RANDOM = new Random();
 
     public static int generateAge() {
-        return RandomUtils.nextInt(17, 60); // возраст от 17 до 59 включительно
+        return RandomUtils.nextInt(17, 60);
     }
 
     public static String generateGender() {
@@ -18,15 +18,15 @@ public class TestUtils {
     }
 
     public static String generateLogin() {
-        return "user" + System.currentTimeMillis(); // уникальный логин
+        return "user" + System.currentTimeMillis();
     }
 
     public static String generateScreenName() {
-        return "User" + System.currentTimeMillis(); // уникальное экранное имя
+        return "User" + System.currentTimeMillis();
     }
 
     public static String generatePassword() {
-        int length = RandomUtils.nextInt(7, 16); // длина пароля от 7 до 15
-        return RandomStringUtils.random(length, true, true); // латинские буквы и цифры
+        int length = RandomUtils.nextInt(7, 16);
+        return RandomStringUtils.random(length, true, true);
     }
 }

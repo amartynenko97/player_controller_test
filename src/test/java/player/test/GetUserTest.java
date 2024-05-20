@@ -30,7 +30,7 @@ public class GetUserTest extends BaseContextTests {
 
 
     @Test
-    public void positiveGetNotExistentUser() {
+    public void negativeGetNotExistentUser() {
         var userId = createUserAndGetId(UserRole.USER.getRole());
 
         var request = GetUserRequestDto.builder()
@@ -43,9 +43,10 @@ public class GetUserTest extends BaseContextTests {
                         .build(),
                 UserRole.ADMIN.getRole()
         );
-        var response = playerHttpEndpoint.getUser(request);
-
-        assertThat(response).isNull();
+        assertHttpFails(
+                () -> playerHttpEndpoint.getUser(request)
+        )
+                .withStatus(HttpStatus.NOT_FOUND);
     }
 
 
